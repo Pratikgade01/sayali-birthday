@@ -1,231 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Sayali ❤️</title>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Sayali ❤️</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
-
-:root{
-  --rose:#c84b70; --wine:#6e203e; --cream:#fff8f3; --ink:#351b25;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--cream);color:var(--ink);
-  font-family:Inter,system-ui,sans-serif;overflow-x:hidden;
-}
-section{min-height:100vh;padding:70px 20px;display:flex;align-items:center;justify-content:center}
-.container{width:min(1050px,100%);margin:auto}
-.hero{
-  position:relative;text-align:center;overflow:hidden;
-  background:radial-gradient(circle at 50% 30%,#fff 0,#ffe7ee 35%,#f7cbd8 100%);
-}
-.hero:before{
-  content:"";position:absolute;inset:0;
-  background:radial-gradient(circle,rgba(200,75,112,.14) 1px,transparent 1px);
-  background-size:28px 28px;opacity:.45;
-}
-.hero-inner{position:relative;z-index:2;max-width:780px}
-.kicker{letter-spacing:5px;text-transform:uppercase;font-size:12px;color:var(--wine);font-weight:600}
-h1,h2{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
-h1{font-size:clamp(54px,12vw,110px);line-height:.95;margin:18px 0;color:var(--wine)}
-.hero p{font-size:clamp(16px,3vw,22px);line-height:1.7;max-width:650px;margin:0 auto 30px}
-.btn{
-  display:inline-flex;align-items:center;gap:9px;border:0;border-radius:999px;
-  padding:15px 24px;background:var(--wine);color:#fff;text-decoration:none;
-  cursor:pointer;font-weight:600;box-shadow:0 12px 30px rgba(110,32,62,.2)
-}
-.scroll{margin-top:55px;font-size:12px;letter-spacing:2px;opacity:.65}
-.float-heart{position:absolute;font-size:22px;animation:float 7s linear infinite;opacity:.55}
-@keyframes float{0%{transform:translateY(110vh) rotate(0);opacity:0}15%{opacity:.6}100%{transform:translateY(-15vh) rotate(360deg);opacity:0}}
-.story{background:#fff}
-.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.story img{width:100%;border-radius:28px;box-shadow:0 25px 60px rgba(72,24,40,.16)}
-.eyebrow{color:var(--rose);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:700}
-h2{font-size:clamp(42px,7vw,72px);line-height:1.05;margin:12px 0 22px;color:var(--wine)}
-.text{font-size:17px;line-height:1.9;color:#62434d}
-.letter{background:linear-gradient(135deg,#fff7f0,#f9e4eb)}
-.letter-card{
-  background:rgba(255,255,255,.82);backdrop-filter:blur(8px);padding:clamp(28px,6vw,70px);
-  border-radius:34px;box-shadow:0 25px 80px rgba(72,24,40,.12);max-width:820px;
-  border:1px solid rgba(110,32,62,.08)
-}
-.letter-card p{font-family:"DM Serif Display",Georgia,serif;font-size:clamp(21px,3vw,30px);line-height:1.65;margin:0}
-.gallery{background:#fff}
-.gallery h2{text-align:center}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:35px}
-.grid img{width:100%;height:360px;object-fit:cover;border-radius:20px;transition:.35s;box-shadow:0 8px 25px rgba(0,0,0,.08)}
-.grid img:hover{transform:translateY(-6px) scale(1.01)}
-.grid img:nth-child(1),.grid img:nth-child(5){height:500px}
-.countdown{background:var(--wine);color:#fff;text-align:center}
-.countdown h2{color:#fff}
-.timer{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:30px 0}
-.box{min-width:105px;padding:22px 14px;border:1px solid rgba(255,255,255,.22);border-radius:20px;background:rgba(255,255,255,.08)}
-.num{font-size:38px;font-weight:600}.label{font-size:11px;letter-spacing:2px;opacity:.7;margin-top:5px}
-.final{min-height:80vh;text-align:center;background:radial-gradient(circle at center,#ffe7ef,#fff8f3 65%)}
-.final h2{font-size:clamp(52px,9vw,92px)}
-.signature{margin-top:35px;font-family:"DM Serif Display",Georgia,serif;font-size:25px;font-style:italic;color:var(--wine)}
-.music-note{font-size:13px;opacity:.65;margin-top:18px}
-#burst{position:fixed;inset:0;pointer-events:none;z-index:20}
-.confetti{position:absolute;width:8px;height:15px;animation:fall 2.4s ease-out forwards}
-@keyframes fall{0%{transform:translate(0,0) rotate(0);opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(720deg);opacity:0}}
-@media(max-width:760px){
-  section{padding:55px 16px}.story-grid{grid-template-columns:1fr;gap:25px}
-  .grid{grid-template-columns:1fr 1fr}.grid img,.grid img:nth-child(1),.grid img:nth-child(5){height:260px}
-}
-</style>
-</head>
-<body>
-
-<div id="burst"></div>
-
-<section class="hero" id="top">
-  <span class="float-heart" style="left:8%;animation-delay:0s">♥</span>
-  <span class="float-heart" style="left:25%;animation-delay:2s">♡</span>
-  <span class="float-heart" style="left:73%;animation-delay:1s">♥</span>
-  <span class="float-heart" style="left:90%;animation-delay:3s">♡</span>
-  <div class="hero-inner">
-    <div class="kicker">A little surprise from Pratik</div>
-    <h1>Happy Birthday,<br>Sayali ❤️</h1>
-    <p>Some people make life beautiful. You made <em>my</em> life beautiful.</p>
-    <button class="btn" onclick="openSurprise()">Open Your Surprise ✨</button>
-    <div class="scroll">SCROLL DOWN • THERE'S MORE LOVE HERE</div>
-  </div>
-</section>
-
-<section class="story">
-  <div class="container story-grid">
-    <img src="./photo5.jpg" alt="Pratik and Sayali together">
-    <div>
-      <div class="eyebrow">My favourite person</div>
-      <h2>In every chapter,<br>I choose you.</h2>
-      <p class="text">From ordinary days to unforgettable moments, you have become my favourite part of every story. Your smile, your presence, and the little things you do make life feel warmer.</p>
-      <p class="text">Today is your birthday, but honestly, I feel like I am the lucky one every day because I get to call you mine.</p>
-    </div>
-  </div>
-</section>
-
-<section class="letter">
-  <div class="container">
-    <div class="letter-card">
-      <div class="eyebrow">A Little Letter From My Heart…</div>
-      <h2>A Letter for You</h2>
-      <p>
-        My Love,<br><br>
-
-        Happy Birthday to the most beautiful person in my life. ❤️
-        <br><br>
-
-        You are not just my wife, but my best friend, my biggest support,
-        and the person who makes my life truly special.
-        <br><br>
-
-        Every moment with you is a memory I want to keep forever.
-        Your smile makes my difficult days easier, your presence makes
-        ordinary moments beautiful, and your love makes me feel complete.
-        <br><br>
-
-        I may not always find the perfect words to express how much you mean
-        to me, but I hope you always know that you have my heart—today,
-        tomorrow, and forever.
-        <br><br>
-
-        I want to grow old with you, make countless memories together,
-        travel the world with you, laugh with you, and stand beside you
-        through every chapter of our lives.
-        <br><br>
-
-        Thank you for being you. Thank you for choosing me.
-        And thank you for making my life more beautiful simply by being a part of it.
-        <br><br>
-
-        Happy Birthday, my love. ❤️
-      </p>
-
-      <div class="signature">— Forever yours, Pratik ❤️</div>
-    </div>
-  </div>
-</section>
-<section class="gallery">
-  <div class="container">
-    <div class="eyebrow" style="text-align:center">Us • Then • Now • Always</div>
-    <h2>Our little collection of memories 📸</h2>
-    <div class="grid">
-      <img src="photo1.jpg" alt="Memory 1">
-<img src="photo2.jpg" alt="Memory 2">
-<img src="photo3.jpg" alt="Memory 3">
-<img src="photo4.jpg" alt="Memory 4">
-<img src="photo5.jpg" alt="Memory 5">
-    </div>
-  </div>
-</section>
-
-<section class="countdown">
-  <div class="container">
-    <div class="eyebrow" style="color:#f5b5c7">The special day</div>
-    <h2>Counting down to your birthday 🎂</h2>
-    <div class="timer">
-      <div class="box"><div class="num" id="days">00</div><div class="label">DAYS</div></div>
-      <div class="box"><div class="num" id="hours">00</div><div class="label">HOURS</div></div>
-      <div class="box"><div class="num" id="mins">00</div><div class="label">MINUTES</div></div>
-      <div class="box"><div class="num" id="secs">00</div><div class="label">SECONDS</div></div>
-    </div>
-    <p>23 August 2026 • Your day, my favourite day ❤️</p>
-  </div>
-</section>
-
-<section class="final">
-  <div class="container">
-    <div class="eyebrow">And one last thing…</div>
-    <h2>I love you.<br>More than words can say. ❤️</h2>
-    <p class="text">May every year ahead bring us more adventures, more laughter, more memories and a lifetime of choosing each other.</p>
-    <div class="signature">Happy Birthday, my love. 🌹<br>— Pratik</div>
-    <div class="music-note">🎵 For “Mere Dil Ke Lifafe Mein”: play your own saved copy of the song while viewing this page.</div>
-  </div>
-</section>
-
+*{box-sizing:border-box}body{margin:0;background:#fff7f4;color:#351b25;font-family:Arial,sans-serif}
+section{min-height:100vh;padding:60px 18px;display:flex;align-items:center;justify-content:center}
+.hero{background:radial-gradient(circle,#fff,#ffdce6);text-align:center;position:relative;overflow:hidden}
+.wrap{max-width:1000px;width:100%;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:12px;color:#9d3557;font-weight:bold}
+h1,h2{font-family:Georgia,serif;font-weight:400;color:#6e203e}h1{font-size:clamp(50px,12vw,105px);line-height:.95;margin:18px 0}
+h2{font-size:clamp(40px,7vw,70px);margin:12px 0 25px}.hero p,.text{font-size:18px;line-height:1.8}
+.btn{border:0;border-radius:30px;background:#6e203e;color:#fff;padding:15px 25px;font-weight:bold;font-size:15px;box-shadow:0 10px 25px #6e203e33}
+.story{background:white}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.story img{width:100%;border-radius:25px}
+.letter{background:linear-gradient(135deg,#fff7f0,#f7e1e9)}.card{background:#ffffffd9;padding:35px;border-radius:30px;box-shadow:0 20px 60px #54203618}.card p{font-family:Georgia,serif;font-size:23px;line-height:1.7}
+.gallery{background:#fff}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photos img{width:100%;height:330px;object-fit:cover;border-radius:18px}.photos img:first-child,.photos img:last-child{height:450px}
+.final{text-align:center;background:#fff0f4}.signature{font-family:Georgia,serif;font-size:25px;font-style:italic;color:#6e203e}
+.music{position:fixed;right:15px;bottom:15px;z-index:20;padding:12px 16px;border:0;border-radius:25px;background:#6e203e;color:white;font-weight:bold}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}.photos{grid-template-columns:1fr 1fr}.photos img,.photos img:first-child,.photos img:last-child{height:260px}.card p{font-size:20px}}
+</style></head><body>
+<audio id="song" loop preload="auto"><source src="music/nazm-nazm.mp3" type="audio/mpeg"></audio>
+<button class="music" id="musicBtn" onclick="toggleMusic()">🎵 Music: Off</button>
+<section class="hero"><div class="wrap"><div class="eyebrow">A little surprise from Pratik</div>
+<h1>Happy Birthday,<br>Sayali ❤️</h1><p>Some people make life beautiful. You made <em>my</em> life beautiful.</p>
+<button class="btn" onclick="openSurprise()">Open Your Surprise ✨</button><p style="font-size:12px;letter-spacing:2px;opacity:.6">TAP THE BUTTON • MUSIC WILL START</p></div></section>
+<section class="story"><div class="wrap grid2"><img src="images/photo5.jpg" alt="Pratik and Sayali">
+<div><div class="eyebrow">My favourite person</div><h2>In every chapter,<br>I choose you.</h2>
+<p class="text">From ordinary days to unforgettable moments, you have become my favourite part of every story. Your smile, your presence, and the little things you do make life feel warmer.</p>
+<p class="text">Today is your birthday, but honestly, I feel like I am the lucky one every day because I get to call you mine.</p></div></div></section>
+<section class="letter"><div class="wrap"><div class="card"><div class="eyebrow">A message from my heart</div><h2>A Letter For You</h2>
+<p>Your name is the most beautiful word written in my heart. You are not just my wife; you are my happiness, my peace, my best friend, and the most beautiful part of my life.<br><br>
+I cherish not only the big moments we share, but also the little things—our laughter, our conversations, our trips, our celebrations, and all those simple days when having you by my side makes everything feel better.<br><br>
+I promise to keep choosing you, supporting you, making you smile, standing beside you through every chapter, and loving you a little more with every passing year.<br><br>
+Happy Birthday, Sayali. ❤️<br>You will always be one of the most beautiful and precious parts of my life.</p>
+<div class="signature">— Forever yours, Pratik ❤️</div></div></div></section>
+<section class="gallery"><div class="wrap"><div class="eyebrow" style="text-align:center">Us • Then • Now • Always</div><h2 style="text-align:center">Our Beautiful Memories 📸</h2>
+<div class="photos"><img src="images/photo1.jpg"><img src="images/photo2.jpg"><img src="images/photo3.jpg"><img src="images/photo4.jpg"><img src="images/photo5.jpg"></div></div></section>
+<section class="final"><div class="wrap"><div class="eyebrow">And one last thing…</div><h2>I love you.<br>More than words can say. ❤️</h2><p class="text">May every year ahead bring us more adventures, more laughter, more memories and a lifetime of choosing each other.</p><div class="signature">Happy Birthday, my love. 🌹<br>— Pratik</div></div></section>
 <script>
-function openSurprise(){
-  document.querySelector('.letter').scrollIntoView({behavior:'smooth'});
-  burst();
-}
-function burst(){
-  const root=document.getElementById('burst');
-  for(let i=0;i<70;i++){
-    const s=document.createElement('span');
-    s.className='confetti';
-    s.innerHTML=Math.random()>.35?'♥':'✦';
-    s.style.left='50%'; s.style.top='22%';
-    s.style.setProperty('--x',(Math.random()*1000-500)+'px');
-    s.style.setProperty('--y',(Math.random()*700+100)+'px');
-    s.style.fontSize=(10+Math.random()*18)+'px';
-    s.style.animationDelay=(Math.random()*.35)+'s';
-    root.appendChild(s);
-    setTimeout(()=>s.remove(),3000);
-  }
-}
-const target=new Date('2026-08-23T00:00:00+05:30').getTime();
-function tick(){
-  let diff=target-Date.now();
-  if(diff<=0){
-    document.getElementById('days').textContent='🎂';
-    document.getElementById('hours').textContent='❤️';
-    document.getElementById('mins').textContent='23';
-    document.getElementById('secs').textContent='08';
-    return;
-  }
-  const d=Math.floor(diff/86400000); diff%=86400000;
-  const h=Math.floor(diff/3600000); diff%=3600000;
-  const m=Math.floor(diff/60000); diff%=60000;
-  const s=Math.floor(diff/1000);
-  document.getElementById('days').textContent=String(d).padStart(2,'0');
-  document.getElementById('hours').textContent=String(h).padStart(2,'0');
-  document.getElementById('mins').textContent=String(m).padStart(2,'0');
-  document.getElementById('secs').textContent=String(s).padStart(2,'0');
-}
-tick(); setInterval(tick,1000);
-</script>
-</body>
-</html>
+const song=document.getElementById('song'),btn=document.getElementById('musicBtn');
+function startMusic(){song.play().then(()=>btn.textContent='🎵 Music: On').catch(()=>{});}
+function openSurprise(){startMusic();document.querySelector('.letter').scrollIntoView({behavior:'smooth'});}
+function toggleMusic(){if(song.paused){startMusic()}else{song.pause();btn.textContent='🎵 Music: Off'}}
+</script></body></html>
