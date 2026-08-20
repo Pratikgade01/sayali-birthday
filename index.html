@@ -16,7 +16,7 @@ h2{font-size:clamp(40px,7vw,70px);margin:12px 0 25px}.hero p,.text{font-size:18p
 .music{position:fixed;right:15px;bottom:15px;z-index:20;padding:12px 16px;border:0;border-radius:25px;background:#6e203e;color:white;font-weight:bold}
 @media(max-width:700px){.grid2{grid-template-columns:1fr}.photos{grid-template-columns:1fr 1fr}.photos img,.photos img:first-child,.photos img:last-child{height:260px}.card p{font-size:20px}}
 </style></head><body>
-<audio id="song" loop preload="auto"><source src="music/nazm-nazm.mp3" type="audio/mpeg"></audio>
+<audio id="song" loop preload="auto"><source src="nazm-nazm.mp3" type="audio/mpeg"></audio>
 <button class="music" id="musicBtn" onclick="toggleMusic()">🎵 Music: Off</button>
 <section class="hero"><div class="wrap"><div class="eyebrow">A little surprise from Pratik</div>
 <h1>Happy Birthday,<br>Sayali ❤️</h1><p>Some people make life beautiful. You made <em>my</em> life beautiful.</p>
@@ -36,7 +36,16 @@ Happy Birthday, Sayali. ❤️<br>You will always be one of the most beautiful a
 <section class="final"><div class="wrap"><div class="eyebrow">And one last thing…</div><h2>I love you.<br>More than words can say. ❤️</h2><p class="text">May every year ahead bring us more adventures, more laughter, more memories and a lifetime of choosing each other.</p><div class="signature">Happy Birthday, my love. 🌹<br>— Pratik</div></div></section>
 <script>
 const song=document.getElementById('song'),btn=document.getElementById('musicBtn');
-function startMusic(){song.play().then(()=>btn.textContent='🎵 Music: On').catch(()=>{});}
+function startMusic(){
+  song.currentTime = song.currentTime || 0;
+  const playPromise = song.play();
+  if (playPromise !== undefined) {
+    playPromise.then(()=>{btn.textContent='🎵 Music: On';}).catch((err)=>{
+      btn.textContent='🎵 Tap to Play';
+      console.log('Audio error:', err);
+    });
+  }
+}
 function openSurprise(){startMusic();document.querySelector('.letter').scrollIntoView({behavior:'smooth'});}
 function toggleMusic(){if(song.paused){startMusic()}else{song.pause();btn.textContent='🎵 Music: Off'}}
 </script></body></html>
